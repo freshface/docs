@@ -208,7 +208,7 @@ However, when using the [Custom Disk CDN](#custom-disk-cdn) caching option with 
 
 To alleviate this problem, Statamic will keep track of whether the images have already been generated in its own separate cache.
 
-This cache is separate from your application cache. Running `php artisan cache:clear` will **not** clear this Glide cache. This allows the Glide cache to persist through deployments or other scenarios where you might clear your application cache. It will be cleared when running `php please glide:clear`.
+This cache is separate from your application cache. Running `php artisan cache:clear` will **not** clear this Glide cache. This allows the Glide cache to persist through deployments or other scenarios where you might clear your application cache. It will be cleared when running `php please statamic:glide:clear`.
 
 By default, this cache will be located in your filesystem with the storage directory.
 
@@ -242,7 +242,7 @@ In this example, you would also need to create a Redis database named `glide` in
 You may manually clear the Glide cache by running the following command:
 
 ```
-php please glide:clear
+php please statamic:glide:clear
 ```
 
 This will **delete all the files** within your Glide cache filesystem location, as well as clearing the [path cache](#path-cache-store).
