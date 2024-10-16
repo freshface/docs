@@ -105,7 +105,16 @@ You can also define the password for a protected entry on the entries themselves
 protect: password
 password: local-password
 ```
+You also need to set the field in the condig file:
 
+``` php
+'password' => [
+    'driver' => 'password',
+    'allowed' => ['secret', 'confidential'],
+    'form_url' => null,
+    'field' => 'password',
+]
+```
 
 ### Password Form
 
